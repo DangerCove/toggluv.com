@@ -29,18 +29,18 @@ body, html, .site-header {
   bottom: 30px;
   left: 30px;
   background: url('/assets/images/icon_256x256.png') no-repeat;
-  background-size: 128px;
   animation: fadein 2s;
   transition: all 0.25s;
+  @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+    background: url('/assets/images/icon_256x256@2x.png') no-repeat;
+    background-size: 128px;
+  }
   @media only screen and (min-width: 600px) {
     width: 256px;
     height: 256px; 
     bottom: 100px;
     left: 100px;
-  }
-  @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    background: url('/assets/images/icon_256x256@2x.png') no-repeat;
-    background-size: 128px;
+    background-size: 256px;
   }
 }
 
