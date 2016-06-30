@@ -5,69 +5,46 @@ The main SCSS file for everything, yep
 @import "foundation.min";
 @import "fonts";
 
-$offset: 2em;
-$text-color: #111;
-
-body, html, .page-content, .divided, .image {
+html, body {
   height: 100%;
 }
 
-.divided {
-  .text {
-    background: white; 
-    color: $text-color;
-    padding: $offset;
-    h1, h3 {
-      text-align: center;
-      margin: ($offset / 2) 0;
-    }
-  }
-}
-@media only screen and (max-width: 70em) {
-  .divided {
-    div {
-      position: absolute;
-      width: 100%;
-    }
-    .text {
-      z-index: 1;
-    }
-    .image {
-      z-index: 0;
-    }
-  }
-}
-@media only screen and (min-width: 70em) {
-  .divided {
-    div {
-      float: left;
-    }
-    .text {
-      width: 40%;
-      height: 100%;
-    }
-    .image {
-      width: 60%;
-    }
-  }
-}
-
-.image {
-  position: relative;
+.site-header {
+  z-index: -1;
+  width: 100%;
+  min-height: 100%;
+  color: white;
   background: url('/assets/images/bg-header.jpg') no-repeat 50% 100%;
   background-size: cover;
+  background-attachment: fixed;
+  text-shadow: 1px 1px 0 #111;
   @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
     background: url('/assets/images/bg-header@2x.jpg') no-repeat 50% 100%;
     background-size: cover;
+    background-attachment: fixed;
+  }
+  .tagline-container {
+    animation: fadein 1s;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
+.page-content {
+  margin-top: -100px;
+  background: white;
+  height: 100%;
+}
+
 #icon {
+  margin-top: -100px;
+  display: inline-block;
   width: 64px;
   height: 64px; 
-  position: absolute;
-  bottom: $offset;
-  left: $offset;
   background: url('/assets/images/icon_128x128.png') no-repeat;
   animation: fadein 2s;
   transition: all 0.25s;
@@ -78,8 +55,6 @@ body, html, .page-content, .divided, .image {
   @media only screen and (min-width: 40em) {
     width: 128px;
     height: 128px; 
-    bottom: $offset * 2;
-    left: $offset * 2;
     background-size: 128px;
   }
 }
