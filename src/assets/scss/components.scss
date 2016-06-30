@@ -1,0 +1,64 @@
+.c-siteheader {
+  z-index: 1;
+  width: 100%;
+  color: white;
+  min-height: 45rem;
+  height: 100%;
+  background: url('/assets/images/bg-header.jpg') no-repeat 50% 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  text-shadow: 1px 1px 0 #111;
+  @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+    background: url('/assets/images/bg-header@2x.jpg') no-repeat 50% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &__icon {
+    padding: 7rem 0 1rem 0;
+    animation: fadein 1s;
+    transition: all 0.25s;
+    width: 128px;
+    height: 128px;
+  }
+  &__header {
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  &__description {
+    font-weight: 300;
+  }
+}
+
+.c-wrapper--homepage {
+  background: white;
+  height: 100%;
+}
+
+.c-preview {
+  position: relative;
+  top: -10rem;
+  animation: moveup 0.5s;
+
+  &__animation {
+    max-width: 80%;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+  }
+  &__playbutton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin-top: -3rem;
+    margin-left: -3rem;
+    cursor: pointer;
+  }
+}
+
+@keyframes moveup {
+  from { top: 0; }
+  to   { top: -10rem; }
+}

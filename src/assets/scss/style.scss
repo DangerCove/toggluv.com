@@ -2,64 +2,24 @@
 The main SCSS file for everything, yep
 */
 
-@import "foundation.min";
-@import "fonts";
+$desktop: 768px;
 
 html, body {
   height: 100%;
 }
-
-.site-header {
-  z-index: -1;
-  width: 100%;
-  min-height: 100%;
-  color: white;
-  background: url('/assets/images/bg-header.jpg') no-repeat 50% 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  text-shadow: 1px 1px 0 #111;
-  @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    background: url('/assets/images/bg-header@2x.jpg') no-repeat 50% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  .tagline-container {
-    animation: fadein 1s;
-    position: absolute;
-    width: 100%;
-    top: 30%;
-    h1 {
-      margin-bottom: 1.5rem;
-    }
+html {
+  font-size: 62.5%;
+  @media (min-width: $desktop) {
+    font-size: 100%;
   }
 }
-
-.page-content {
-  margin-top: -100px;
-  background: white;
-  height: 100%;
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 1.6rem;
 }
 
-#icon {
-  margin-top: -100px;
-  display: inline-block;
-  width: 64px;
-  height: 64px; 
-  background: url('/assets/images/icon_128x128.png') no-repeat;
-  animation: fadein 2s;
-  transition: all 0.25s;
-  @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    background: url('/assets/images/icon_128x128@2x.png') no-repeat;
-    background-size: 64px;
-  }
-  @media only screen and (min-width: 40em) {
-    width: 128px;
-    height: 128px; 
-    background-size: 128px;
-  }
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+@import "normalize";
+@import "fonts";
+@import "utilities";
+@import "animations";
+@import "components";

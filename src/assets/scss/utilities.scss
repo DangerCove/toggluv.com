@@ -1,0 +1,18 @@
+.u-alignment {
+  &--center {
+    text-align: center;
+  }
+}
+.u-fontstyle {
+  &--strong {
+    font-family: Galano, sans-serif;
+    font-weight: bold;
+  }
+  &--pill {
+    display: inline-block;
+    background: #E41C24;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+  }
+}
