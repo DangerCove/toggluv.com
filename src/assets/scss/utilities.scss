@@ -16,3 +16,12 @@
     border-radius: 1rem;
   }
 }
+
+.u-visibility--hidden {
+  display: none;
+}
+
+.u-effects-fadein {
+  animation: fadein 1s;
+}
+

@@ -14,11 +14,8 @@
     background-attachment: fixed;
   }
   &__icon {
-    padding: 7rem 0 1rem 0;
+    margin: 7rem 0 1rem 0;
     animation: fadein 1s;
-    transition: all 0.25s;
-    width: 128px;
-    height: 128px;
   }
   &__header {
     font-size: 4rem;
@@ -32,7 +29,7 @@
 
 .c-wrapper--homepage {
   background: white;
-  height: 100%;
+  min-height: 100%;
 }
 
 .c-preview {
@@ -44,7 +41,8 @@
     max-width: 80%;
     padding: 1rem;
     background: white;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    border: #eee 1px solid;
+    box-shadow: 0 2px 0px rgba(0,0,0,0.2);
   }
   &__playbutton {
     position: absolute;
@@ -56,6 +54,27 @@
     margin-left: -3rem;
     cursor: pointer;
   }
+}
+
+.c-mailinglist {
+
+  input:not([type="submit"]) {
+    padding: 1rem;
+    border: #eee 1px solid;
+    box-shadow: 0 2px 0px rgba(0,0,0,0.2);
+    width: 100%;
+  }
+  input[type="submit"] {
+    padding: 1rem;
+    background: #E41C24;
+    border: 0;
+    border-radius: 1rem;
+    color: white;
+  }
+}
+
+.c-sitefooter {
+  min-height: 5rem;
 }
 
 @keyframes moveup {

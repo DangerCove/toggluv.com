@@ -4,6 +4,12 @@ The main SCSS file for everything, yep
 
 $desktop: 768px;
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -19,6 +25,7 @@ body {
 }
 
 @import "normalize";
+@import "pills";
 @import "fonts";
 @import "utilities";
 @import "animations";
