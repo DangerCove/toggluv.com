@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Galano;
+  font-weight: bold;
+  src: url("/assets/fonts/Galano Grotesque DEMO Bold.otf") format("opentype");
+}
+
+.strong {
+  font-family: Galano, sans-serif;
+  font-weight: bold;
+}

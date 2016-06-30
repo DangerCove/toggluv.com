@@ -3,44 +3,84 @@ The main SCSS file for everything, yep
 */
 
 @import "foundation.min";
+@import "fonts";
 
-body, html, .site-header {
+$offset: 2em;
+$text-color: #111;
+
+body, html, .page-content, .divided, .image {
   height: 100%;
 }
 
-.site-header {
+.divided {
+  .text {
+    background: white; 
+    color: $text-color;
+    padding: $offset;
+    h1, h3 {
+      text-align: center;
+      margin: ($offset / 2) 0;
+    }
+  }
+}
+@media only screen and (max-width: 70em) {
+  .divided {
+    div {
+      position: absolute;
+      width: 100%;
+    }
+    .text {
+      z-index: 1;
+    }
+    .image {
+      z-index: 0;
+    }
+  }
+}
+@media only screen and (min-width: 70em) {
+  .divided {
+    div {
+      float: left;
+    }
+    .text {
+      width: 40%;
+      height: 100%;
+    }
+    .image {
+      width: 60%;
+    }
+  }
+}
+
+.image {
   position: relative;
-  color: #fff;
   background: url('/assets/images/bg-header.jpg') no-repeat 50% 100%;
   background-size: cover;
   @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
     background: url('/assets/images/bg-header@2x.jpg') no-repeat 50% 100%;
     background-size: cover;
   }
-  h1 {
-    margin-top: 100px;
-  }
 }
 
 #icon {
-  width: 128px;
-  height: 128px; 
+  width: 64px;
+  height: 64px; 
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  background: url('/assets/images/icon_256x256.png') no-repeat;
+  bottom: $offset;
+  left: $offset;
+  background: url('/assets/images/icon_128x128.png') no-repeat;
   animation: fadein 2s;
   transition: all 0.25s;
   @media only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    background: url('/assets/images/icon_256x256@2x.png') no-repeat;
-    background-size: 128px;
+    background: url('/assets/images/icon_128x128@2x.png') no-repeat;
+    background-size: 64px;
   }
-  @media only screen and (min-width: 600px) {
-    width: 256px;
-    height: 256px; 
-    bottom: 100px;
-    left: 100px;
-    background-size: 256px;
+  @media only screen and (min-width: 40em) {
+    width: 128px;
+    height: 128px; 
+    bottom: $offset * 2;
+    left: $offset * 2;
+    background-size: 128px;
   }
 }
 
