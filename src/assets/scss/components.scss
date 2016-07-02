@@ -6,7 +6,7 @@
   z-index: 1;
   width: 100%;
   color: white;
-  min-height: 45rem;
+  min-height: 50rem;
   height: 100%;
   background: url('/assets/images/bg-header.jpg') no-repeat 50% 100%;
   background-size: cover;
@@ -89,11 +89,17 @@
     background-color: #E41C24;
     color: white;
     border-bottom-color: #6C0A0D;
+    &:hover {
+      background-color: #E22C33;
+    }
   }
   &--confirm {
     background-color: #1C7CE4;
     color: white;
     border-bottom-color: #0E4683;
+    &:hover {
+      background-color: #489BF4;
+    }
   }
 
   &:hover {
@@ -101,8 +107,15 @@
   }
 }
 
+.c-beta {
+  &__header, &__description {
+    text-align: center;
+  }
+}
+
 .c-sitefooter {
   min-height: 5rem;
+  font-size: 1rem;
 }
 
 @keyframes moveup {

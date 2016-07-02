@@ -25,8 +25,13 @@ body {
   font-size: 1.6rem;
   color: $color;
 }
-a {
+p a {
+  color: #E41C24;
+  &:hover {
+    color:  #1C7CE4;
+  }
 }
+
 
 @import "normalize";
 @import "pills";
