@@ -71,9 +71,13 @@
   border: #eee 1px solid;
   box-shadow: 0 2px 0px rgba(0,0,0,0.2);
   width: 100%;
+  &.required {
+    border-color: #1C7CE4;
+  }
 }
 
 .c-button {
+  cursor: pointer;
   display: inline-block;
   padding: 0.5rem 2rem;
   background: white;
@@ -98,12 +102,17 @@
     color: white;
     border-bottom-color: #0E4683;
     &:hover {
-      background-color: #489BF4;
+      background-color: #2D82DF;
     }
   }
 
   &:hover {
     box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+  }
+}
+.c-mailinglist--submit {
+  .c-button--confirm {
+    width: 100%;
   }
 }
 
