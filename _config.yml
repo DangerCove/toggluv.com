@@ -1,7 +1,7 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Toggluv
-description: Toggluv is the illest Toggl client for macOS.
+description: Toggluv is the fastest, smoothest and prettiest way to log time in Toggl.
 url: https://www.toggluv.com
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants

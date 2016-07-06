@@ -1,5 +1,36 @@
 .c-modal {
-  display: none;
+  visibility: hidden;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: 0.25s linear all;
+  &__content {
+    position: relative;
+    width: auto;
+    margin: 5rem auto 0;
+    padding: 2rem;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.4);
+    background: white;
+    text-align: center;
+    &__hidebutton {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+  &.is-visible, div.is-visible {
+    visibility: visible;
+    transition: 0.25s linear all;
+    opacity: 1;
+  }
 }
 
 .c-siteheader {
@@ -30,6 +61,15 @@
   }
   &__description {
     font-weight: 300;
+    &__link {
+      color: white;
+      text-decoration: none;
+      border-bottom: white 1px solid;
+      &:hover {
+        color: white;
+        border-bottom: none;
+      }
+    }
   }
 
   .c-download {
@@ -44,15 +84,15 @@
 
 .c-preview {
   position: relative;
-  top: -10rem;
+  top: -5rem;
   animation: moveup 0.5s;
 
   &__animation {
     max-width: 80%;
     padding: 1rem;
     background: white;
-    border: #eee 1px solid;
-    box-shadow: 0 2px 0px rgba(0,0,0,0.2);
+    border: #aaa 1px solid;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.4);
   }
   &__playbutton {
     position: absolute;
@@ -94,7 +134,7 @@
     color: white;
     border-bottom-color: #6C0A0D;
     &:hover {
-      background-color: #E22C33;
+      background-color: #D0151C;
     }
   }
   &--confirm {
@@ -102,7 +142,7 @@
     color: white;
     border-bottom-color: #0E4683;
     &:hover {
-      background-color: #2D82DF;
+      background-color: #136AC9;
     }
   }
 
@@ -110,9 +150,16 @@
     box-shadow: 0 2px 2px rgba(0,0,0,0.4);
   }
 }
-.c-mailinglist--submit {
-  .c-button--confirm {
-    width: 100%;
+
+.c-mailinglist {
+  &--submit {
+    .c-button--confirm {
+      width: 100%;
+    }
+  }
+  &--spam {
+    font-size: 1rem;
+    color: #aaa;
   }
 }
 
@@ -123,6 +170,7 @@
 }
 
 .c-sitefooter {
+  margin: 5rem 0;
   min-height: 5rem;
   font-size: 1rem;
 }

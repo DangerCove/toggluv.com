@@ -1,2 +1,11 @@
-<div id="modal" class="c-modal">
+<div class="c-modal">
+  <div class="row c-modal__content c-modal--download">
+    <img class="c-modal__content__hidebutton" src="/assets/images/btn-close.svg">
+    <h3 class="c-modal__content__header">Thanks for checking out Toggluv</h3>
+    <p class="c-modal__content__description">Just sign up for the mailing list and I'll send you the link straight away. &#x1F64C;</p>
+    <small class="c-modal--download__notice">Notice: pre-releases might contain bugs and they won't look as good as the final product.</small>
+    <div class="u-spacing--betweentext">
+      {% include mailchimp.html %}
+    </div>
+  </div>
 </div>
