@@ -40,6 +40,11 @@ function bindButtons() {
   // Mailinglist button
   var mailinglistButton = document.querySelector('.c-modal--download .c-mailinglist--submit .c-button--confirm');
   mailinglistButton.addEventListener('click', function(event) {
+    var textFields = document.querySelectorAll('.c-mailinglist .c-input--text');
+    for (var i = 0; i < textFields.length; i++) {
+      var textField = textFields[i];
+      textField.value = '';
+    }
     hideModal();
   });
 }
