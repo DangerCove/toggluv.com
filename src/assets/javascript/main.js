@@ -1,8 +1,11 @@
 function hideModal() {
-    var modalContainer = document.querySelector('.c-modal'),
-        modals = document.querySelector('.c-modal > div');
-    modalContainer.classList.remove('is-visible');
-    modals.classList.remove('is-visible');
+  var modalContainer = document.querySelector('.c-modal'),
+  modals = document.querySelectorAll('.c-modal > div');
+  modalContainer.classList.remove('is-visible');
+  for (var i = 0; i < modals.length; i++) {
+    var modal = modals[i];
+    modal.classList.remove('is-visible');
+  }
 }
 function bindButtons() {
   // Play button on preview
@@ -29,16 +32,20 @@ function bindButtons() {
     downloadButton.addEventListener('click', function(event) {
       event.preventDefault(); // Prevent link being called
       var modalContainer = document.querySelector('.c-modal'),
-      modals = document.querySelector('.c-modal > div'),
-      modal = document.querySelector('.c-modal--download');
-      modalContainer.classList.remove('is-visible');
-      modalContainer.classList.add('is-visible');
-      modals.classList.remove('is-visible');
-      modal.classList.add('is-visible');
+      modals = document.querySelectorAll('.c-modal > .is-visible'),
+      downloadModal = document.querySelector('.c-modal-download');
+      for (var i = 0; i < modals.length; i++) {
+        var modal = modals[i];
+        modal.classList.remove('is-visible');
+      }
+      if (!modalContainer.classList.contains('is-visible')) {
+        modalContainer.classList.add('is-visible');
+      }
+      downloadModal.classList.add('is-visible');
     }, false);
   }
   // Mailinglist button
-  var mailinglistButton = document.querySelector('.c-modal--download .c-mailinglist--submit .c-button--confirm');
+  var mailinglistButton = document.querySelector('.c-modal-download .c-mailinglist--submit .c-button--confirm');
   mailinglistButton.addEventListener('click', function(event) {
     hideModal();
   });

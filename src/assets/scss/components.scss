@@ -12,7 +12,7 @@
   &__content {
     position: relative;
     width: auto;
-    margin: 5rem auto 0;
+    margin: -1000px auto 0;
     padding: 2rem;
     box-shadow: 0 2px 40px rgba(0,0,0,0.4);
     background: white;
@@ -25,8 +25,11 @@
       top: 8px;
       right: 8px;
     }
+    &.is-visible {
+      margin: 5rem auto 0;
+    }
   }
-  &.is-visible, div.is-visible {
+  &.is-visible, &__content.is-visible {
     visibility: visible;
     transition: 0.25s linear all;
     opacity: 1;
@@ -163,14 +166,28 @@
   }
 }
 
-.c-beta {
-  &__header, &__description {
-    text-align: center;
+.c-section {
+  padding : 3rem 0;
+}
+
+.c-benefits {
+  background: #efefef;
+}
+
+.c-list {
+  list-style: none;
+  &__content {
+    &__header {
+      font-size: 1.5rem;
+    }
+    &__description {
+      font-size: 1rem;
+    }
   }
 }
 
 .c-sitefooter {
-  margin: 5rem 0;
+  margin: 3rem 0;
   min-height: 5rem;
   font-size: 1rem;
 }
