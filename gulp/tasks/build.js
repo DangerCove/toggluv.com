@@ -16,16 +16,16 @@ gulp.task('site:tmp', () =>
 // 'gulp jekyll --prod' -- builds your site with production settings
 gulp.task('site', done => {
   if (!argv.prod) {
-    shell.exec('jekyll build');
+    shell.exec('bundle exec jekyll build');
     done();
   } else if (argv.prod) {
-    shell.exec('jekyll build --config _config.yml,_config.build.yml');
+    shell.exec('bundle exec jekyll build --config _config.yml,_config.build.yml');
     done();
   }
 });
 
 // 'gulp doctor' -- literally just runs jekyll doctor
 gulp.task('site:check', done => {
-  shell.exec('jekyll doctor');
+  shell.exec('bundle exec jekyll doctor');
   done();
 });
