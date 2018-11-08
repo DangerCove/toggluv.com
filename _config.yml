@@ -49,3 +49,6 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+
+include:
+  _redirects
