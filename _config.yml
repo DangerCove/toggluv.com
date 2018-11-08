@@ -51,4 +51,4 @@ gems:
   - jekyll-seo-tag
 
 include:
-  _redirects
+  - _redirects
