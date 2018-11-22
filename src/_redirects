@@ -1,8 +1,8 @@
-/download/beta  https://dl.devmate.com/com.dangercove.Toggluv.Mac/beta/Toggluv.zip
+/download/beta                            https://dl.devmate.com/com.dangercove.Toggluv.Mac/beta/Toggluv.zip
 
-https://www.toggluv.com   https://www.dangercove.com/toggluv
+https://www.toggluv.com/*                 https://www.dangercove.com/toggluv                                        301!
 
-https://help.toggluv.com  https://support.dangercove.com/category/toggluv
+https://help.toggluv.com/*                https://support.dangercove.com/category/toggluv                           301!
 
-https://app.toggluv.com/interface/buy    https://sites.fastspring.com/dangercove/product/toggluv
-https://app.toggluv.com/interface/help   https://support.dangercove.com/category/toggluv
+https://app.toggluv.com/interface/buy     https://sites.fastspring.com/dangercove/product/toggluv
+https://app.toggluv.com/interface/help    https://support.dangercove.com/category/toggluv
